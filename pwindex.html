@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEPs</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>BUSCADOR DE CEPs</header>
+
+    <div  class="form">
+        <input id="cep" type="text" />
+        <button onclick="getCepInfo()">Procurar</button>
+        <button onclick="clearCep()">Limpar</button>
+    </div>
+
+    <div class="infor">
+        <p><b>Rua: <span id="rua"></b></span></p>
+        <p><b>Bairro: <span id="bairro"></b></span></p>
+        <p><b>Cidade: <span id="cidade"></b></span></p>
+        <p><b>Estado: <span id="estado"></b></span></p>
+    </div>
+
+    <div class="rodapé">
+         <p>lisa, o terror deles</p>
+    </div>
+  
+    <script src="code.js"></script>
+</body>
+</html>
