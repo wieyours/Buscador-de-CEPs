@@ -1,21 +1,21 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 *{
     font-family: "Poppins";
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 header {
     text-align: center; 
     color: #E6E6FA;
     font-family: "Poppins";
-    font-size: 50px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /*p se adaptar dinamicamente*/
     background-color: #4B0082;
-    padding: 2% 0% 2% 2%;
-    margin-bottom: 50px;
+    padding: 2rem;
+    margin-bottom: 2rem;
     text-shadow: 1px 1px 2px black;
 
 }
@@ -24,11 +24,13 @@ header {
     display: flex;
     justify-content: center;
     gap: 8px;
+    flex-wrap: wrap; /*p form quebrar a linha*/
    
 }
 
 button {
-    color: #4B0082;
+color: #4B0082;
+
 }
 
 .infor {
@@ -37,7 +39,7 @@ button {
     flex-direction: column;
     opacity: 0.5;
     color: #4B0082;
-    padding: 50px;
+    padding: 2rem;
 }
 
 .rodapé {
@@ -48,6 +50,33 @@ button {
     position: absolute;
     bottom:0%;
     width: 100%;  
-    padding: 1% 1% 1% 1%;
+    padding: 1rem;
 }
 
+ @media (max-width: 768px) {
+    header {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    .form {
+        gap: 10px; /*espaçamento do form*/
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        width: 75%; /*ocupa uma parte da largura disponível*/
+        max-width: 400px;
+    }
+
+    .infor {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+
+    .rodapé {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
